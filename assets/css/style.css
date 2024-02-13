@@ -1,0 +1,216 @@
+/* fontes do Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+@import url('https:/fotns.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+/* reset css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(#3b82f6, #4a7dff);
+}
+
+/* estilizações do tempo */
+
+.container-tempo {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 270px;
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+    margin-bottom: 20px;
+    background-color: rgba(5, 5, 5, .9);
+}
+
+.container-tempo.mostrar {
+    display: flex;
+}
+
+.dia p {
+    color: #ffffff;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.relogio {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.relogio div {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 7px;
+    letter-spacing: 3px;
+}
+
+.relogio span {
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* estilizações do clima */
+
+#container-clima {
+    background-color: #f0f8ff;
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+}
+
+#pesquisar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #bdbdbd;
+    border-radius: 10px;
+    padding: 4px 12px;
+}
+
+#pesquisar input {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+#pesquisar input:focus-visible {
+    outline: none;
+}
+
+#pesquisar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#clima {
+    display: none;
+    margin-top: 20px;
+    transition: all .3s ease;
+}
+
+#clima.mostrar {
+    display: block;
+}
+
+#clima #titulo {
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #372f3f;
+}
+
+#temp {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    background: linear-gradient(90deg, #5a7cdc, #606dde);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
+}
+
+#img-temp {
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .1));
+}
+
+#valor-temp {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 55px;
+}
+
+#desc-temp {
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+#outras-infos {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 4px 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
+    background-color: #ffffff;
+    gap: 10px;
+}
+
+.info h2 {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.info i {
+    text-align: center;
+    font-size: 20px;
+    width: 20%;
+}
+
+#outra-info {
+    width: 70%;
+    margin: 12px auto;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icone-temp-max {
+    color: #7f1d1d;
+}
+
+#icone-temp-min {
+    color: #0284c7;
+}
+
+#icone-humildade {
+    color: #0ea5e9;
+}
+
+#icone-vento {
+    color: #777777;
+}
+
+#icone-sens-term {
+    color: #7c3aed;
+}
+
+#alerta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    gap: 5px;
+}
