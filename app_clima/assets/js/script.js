@@ -58,21 +58,10 @@ const relogio = setInterval(function time() {
     let a = dataAjustada.getFullYear();
     let sem = semanas[dataAjustada.getDay()][0].toLocaleUpperCase() + semanas[dataAjustada.getDay()].substring(1);
 
-    // adiciona um 0 caso o número tenha menos que duas casas decimais
-    if (hr < 10) {
-        hr = '0' + hr;
-    }
-    if (min < 10) {
-        min = '0' + min;
-    }
-    if (s < 10) {
-        s = '0' + s;
-    }
-
     // define os elementos com os valores atuais
-    horas.textContent = hr;
-    minutos.textContent = min;
-    segundos.textContent = s;
+    horas.textContent = hr.toString().padStart(2, '0');
+    minutos.textContent = min.toString().padStart(2, '0');
+    segundos.textContent = s.toString().padStart(2, '0');
     dia.textContent = d;
     mes.textContent = m;
     ano.textContent = a;
